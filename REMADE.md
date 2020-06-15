@@ -3,5 +3,6 @@
  * api
  * swoole
  * websocket
+ * curl
  * ...
  
