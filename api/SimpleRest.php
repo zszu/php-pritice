@@ -7,11 +7,11 @@ class SimpleRest
     private $httpVersion = 'HTTP/1.1';
     public function  setHttpHeader($contentType , $statusCode){
 
-
         $statusMessage = $this->getHttpStatusMessage($statusCode);
 
-        header($this->httpVersion." ".$statusCode." ".$statusMessage);
-        header("Content-Type:".$contentType);
+        header($this->httpVersion. " ". $statusCode ." ". $statusMessage);    
+        header("X-Content-Type-Options:nosniff");    
+        header("Content-Type:". $contentType);
     }
     public function getHttpStatusMessage($statusCode){
         $httpStatus = [

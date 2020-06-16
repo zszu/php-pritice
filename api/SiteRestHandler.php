@@ -14,6 +14,7 @@ class SiteRestHandler extends SimpleRest
 
             $statusCode = 200;
         }
+
         $requestContentType = $_SERVER['HTTP_ACCEPT'];
         $this->setHttpHeader($requestContentType , $statusCode);
         if(strpos($requestContentType , 'application/json') !== false){
