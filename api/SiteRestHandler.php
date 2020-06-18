@@ -15,7 +15,10 @@ class SiteRestHandler extends SimpleRest
             $statusCode = 200;
         }
 
+
+
         $requestContentType = $_SERVER['HTTP_ACCEPT'];
+      
         $this->setHttpHeader($requestContentType , $statusCode);
         if(strpos($requestContentType , 'application/json') !== false){
             $response = $this->encodeJson($rawData);
@@ -55,7 +58,7 @@ class SiteRestHandler extends SimpleRest
      * @param $responseData   json
      * @return mixed
      */
-    public function encodeJosn($responseData){
+    public function encodeJson($responseData){
         $jsonRespone = json_encode($responseData);
         return $jsonRespone;
     }

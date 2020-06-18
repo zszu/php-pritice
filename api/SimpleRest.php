@@ -10,8 +10,8 @@ class SimpleRest
         $statusMessage = $this->getHttpStatusMessage($statusCode);
 
         header($this->httpVersion. " ". $statusCode ." ". $statusMessage);    
-        header("X-Content-Type-Options:nosniff");    
-        header("Content-Type:". $contentType);
+        // header("X-Content-Type-Options:nosniff");    
+        // header("Content-Type:". $contentType);
     }
     public function getHttpStatusMessage($statusCode){
         $httpStatus = [

@@ -1,0 +1,3 @@
+# 开启 rewrite 功能
+Options +FollowSymlinks
+RewriteEngine on

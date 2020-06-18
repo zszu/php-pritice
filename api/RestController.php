@@ -11,9 +11,11 @@ switch ($view){
     case "all" :
         $siteRestHandler = new SiteRestHandler();
         $siteRestHandler->getAllSites();
+         break;
     case "single":
         $siteRestHandler = new SiteRestHandler();
         $siteRestHandler->getAllSite($_GET['id']);
+         break;
     case "" :
         break;
 }

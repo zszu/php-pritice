@@ -23,6 +23,7 @@ abstract class BaseFacade
 		if(isset(self::$instance)){
 			return self::$instance ;
 		}
+		var_dump($name);die;
 		return self::$instance = new $name;
 	}
 
