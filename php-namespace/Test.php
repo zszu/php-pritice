@@ -2,9 +2,9 @@
 namespace zsz;
 class Test
 {
-	public  function getName()
+	public  function __construct()
 	{
-		return 'zsz\Test';
+		echo 'zsz\Test';
 	}
 	
 }

@@ -5,6 +5,9 @@ class Test
 	{
 		echo __DIR__."\\".get_class()."\n";
 	}
+	public function aa(){
+		echo "abc";
+	}
 	
 }
 ?>
