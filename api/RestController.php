@@ -14,7 +14,7 @@ switch ($view){
          break;
     case "single":
         $siteRestHandler = new SiteRestHandler();
-        $siteRestHandler->getAllSite($_GET['id']);
+        $siteRestHandler->getSite($_GET['id']);
          break;
     case "" :
         break;

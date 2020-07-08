@@ -19,7 +19,7 @@ class A{
     public $name;
     function show($arg1){
         echo 'the arg is:'.$arg1."<br/>";
-        echo 'my name is:'.$this->name;
+        // echo 'my name is:'.$this->name;
         echo "<br/>";
     }
 
@@ -38,7 +38,9 @@ class A{
 $a = new A;
 $a->name = 'wen';
 call_user_func_array(array($a,'show',),array('han!'));
-//调用类中非静态成员函数，没有对象被创建，该成员函数中不能有$this
-call_user_func_array(array('A','show1',),array('han!','wen'));
+//调用类中非静态成员函数，没有对象被创建，该成员函数中不能有$this  // 调用类中的动态方法，对象和方法必须通过数组形式传递
+// call_user_func_array(array('A','show1',),array('han!','wen'));  //报错   Non-static method A::show1() should not be called statically 
+// call_user_func([new A, 'show1'], 'han!', 'wen'); 
+// call_user_func_array([new A, 'show1'], array('han!','wen')); 
 //调用类中静态成员函数
 call_user_func_array(array('A','show2'),array('argument1','argument2'));
